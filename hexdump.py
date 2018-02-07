@@ -21,9 +21,9 @@ with open(filename,'rb') as f:
             output2=''.join(BTA)
 
             print('{:08x}'.format(16*count), end='  '+output1+((16-len(chunk))*3*' ')+'  |'+output2+'|')
-            print("\n")
+            print()
             count=count +1
 
         else:
-            #print('{:08x}'.format(16*count), end='  ')
+            print('{:08x}'.format(16*count))
             break
