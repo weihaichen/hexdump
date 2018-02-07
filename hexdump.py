@@ -21,10 +21,11 @@ with open(filename,'rb') as f:
             output1=' '.join(BTH)
             output2=''.join(BTA)
 
-            print(output1+((16-len(chunk))*3*' ')+'  |'+output2+'|')
-            print('{:08x}'.format(16*count),end='  ')
+            print('{:08x}'.format(16*count),end='  '+output1+((16-len(chunk))*3*' ')+'  |'+output2+'|')
+            print()
             count=count +1
 
         else:
-            
+            if(count!=0):
+                print('{:08x}'.format(16*count),end='')
             break
